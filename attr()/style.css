@@ -1,0 +1,34 @@
+/* This is a demonstration of the attr() function in CSS.
+ * The attr() function can be used to retrieve the value of an attribute
+ * and use it in CSS properties. In this case, we are using it to set
+ * the background color of the box based on a custom data attribute.
+ */
+ 
+.box {
+    /* background-color: red; */
+    background-color: attr(data-color type(<color>));
+    width: 300px;
+    height: 300px;
+    border: 50px solid black;
+    position: relative;
+}
+
+/* Note, the red background color is commented out.
+ * The attr() function will use the value of the data-color attribute
+ * to set the background color of the box.
+ * If the data-color attribute in the html is not set, it will default to red.
+ */
+
+/* Uncomment the line below to see the effect of attr() in action.
+* The attr() function is not widely supported in all browsers yet,
+* so it may not work in all environments.
+*/
+
+
+/* .box {
+    background-color: attr(data-color type(<color>), red);
+    width: 300px;
+    height: 300px;
+    border: 50px solid black;
+    position: relative;
+} */
